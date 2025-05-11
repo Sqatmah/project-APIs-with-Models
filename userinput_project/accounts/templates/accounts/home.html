@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Home Page</title>
+    <style>
+        body {
+            font-family: 'Segoe UI', sans-serif;
+            background-color: #f9f9f9;
+            text-align: center;
+            padding: 50px;
+        }
+
+        h1 {
+            margin-bottom: 40px;
+            color: #333;
+        }
+
+        .button-grid {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            gap: 20px;
+        }
+
+        a.button {
+            display: inline-block;
+            padding: 15px 30px;
+            background-color: #007bff;
+            color: white;
+            border-radius: 8px;
+            text-decoration: none;
+            font-weight: bold;
+            transition: background-color 0.2s;
+        }
+
+        a.button:hover {
+            background-color: #0056b3;
+        }
+    </style>
+</head>
+<body>
+    <h1>Choose a Method to Submit User Data</h1>
+    <div class="button-grid">
+        <a href="{% url 'form_view' %}" class="button">Form View</a>
+        <a href="{% url 'function_view' %}" class="button">Function-Based View</a>
+        <a href="{% url 'class_view' %}" class="button">Class-Based View</a>
+        <a href="{% url 'generic_view' %}" class="button">Generic View</a>
+        <a href="{% url 'users_list' %}" class="button" style="background-color: #28a745;">View All Users</a>
+    </div>
+</body>
+</html>

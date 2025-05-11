@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Generic View</title>
+    <style>
+        body { font-family: sans-serif; margin: 40px; }
+        form { max-width: 400px; margin: auto; }
+        input, button { width: 100%; padding: 10px; margin: 10px 0; }
+        a { display: block; text-align: center; margin-top: 20px; color: blue; }
+    </style>
+</head>
+<body>
+    <h2>Submit Data Using Generic View</h2>
+    <form method="post">
+        {% csrf_token %}
+        {{ form.as_p }}
+        <button type="submit">Submit</button>
+    </form>
+    <a href="{% url 'home' %}">← Back to Home</a>
+</body>
+</html>
