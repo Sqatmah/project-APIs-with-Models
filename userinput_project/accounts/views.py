@@ -50,11 +50,11 @@ class ClassBasedView(View):
 
 ## GENERIC VIEW 
 
-    class GenericCreateView(CreateView):
-        model = UserData
-        form_class = UserDataForm
-        template_name = 'accounts/generic_view.html'
-        success_url = reverse_lazy('user_list')
+class GenericCreateView(CreateView):
+     model = UserData
+     form_class = UserDataForm
+     template_name = 'accounts/generic_view.html'
+     success_url = reverse_lazy('user_list')
 
 
 ## Showing User Results /present
